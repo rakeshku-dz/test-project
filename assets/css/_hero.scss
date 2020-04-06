@@ -1,0 +1,13 @@
+figure{height: 730px; background: url(../img/banner.jpg) no-repeat center top; background-size: cover; color: #fff;
+    .bannerText{font-family: $oswaldFont; font-weight: 700; font-size: 40px; padding: 0 15px; text-align: right; text-transform: uppercase; letter-spacing: 3px; font-style: italic; position: relative;
+        li{opacity: 0.6;
+            &.active{opacity: 1;}
+        }
+        &:after, &:before{position: absolute; left: 0; z-index: 1; content: " "; height: 51px; width: 100%;}
+        &:after{background: url(../img/upper-shadow.png); top: 0;}
+        &:before{background: url(../img/lower-shadow.png); bottom: 0;}
+    }
+    .headTitle{font-family: $rockSaltFont; font-size: 38px; text-transform: uppercase; letter-spacing: 3px;
+        span{background: url(../img/banner-head.svg) no-repeat left center; background-size: cover; display: inline-block; padding: 0 30px;}
+    }    
+}

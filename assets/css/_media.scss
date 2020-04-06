@@ -1,0 +1,23 @@
+@media all and (max-width:1199px){
+    .container{width:100%; max-width: initial;}
+}
+
+@media all and (max-width:991px){
+    .main-header { padding: 10px 0;
+        .logo img{max-height: 50px;}
+        .navigation{
+            position: absolute; top:70px; left:0; width:100%; background-color: $blackColor; text-align: center; opacity: 0;
+        }
+        .menu-icon{display: block;}
+        .menu-btn:checked ~ .navigation{opacity: 1;}
+        .menuLists{
+            .menuList{ padding:10px;
+                a{    display: block;           
+                    &.active{background: none;}                
+                }
+            }
+        }
+       
+    }
+    
+}
