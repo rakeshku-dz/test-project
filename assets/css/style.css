@@ -198,14 +198,27 @@ input:focus {
 .main-header .searchWidget {
   position: relative;
 }
-.main-header .searchWidget .form-control {
+.main-header .searchWidget .inputWrap {
   position: absolute;
   right: 30px;
   top: 0;
+  display: none;
+}
+.main-header .searchWidget .inputWrap .form-control {
   min-width: 200px;
   height: auto;
-  padding: 0.2rem 0.75rem;
-  display: none;
+  padding: 0.2rem 1.5rem 0.2rem 0.75rem;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+}
+.main-header .searchWidget .inputWrap button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  height: 100%;
+  padding: 0 8px;
 }
 .main-header .searchWidget svg {
   fill: rgba(255, 255, 255, 0.5);
@@ -441,6 +454,7 @@ a.more-articles {
   font-size: 24px;
   line-height: 1;
   text-transform: uppercase;
+  overflow: hidden;
 }
 .event-tabs a {
   color: rgba(0, 0, 0, 0.14);
@@ -504,26 +518,42 @@ footer .sep {
   .main-header .navigation {
     position: absolute;
     top: 70px;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 250px;
     background-color: #000000;
     text-align: center;
     opacity: 0;
+    transform: translateX(250px);
+    transition: all 0.8s ease;
+    height: calc(100vh - 70px);
+    overflow: auto;
+  }
+  .main-header .navigation .menuLists .menuList a {
+    display: block;
+  }
+  .main-header .navigation .menuLists .menuList a.active {
+    background: none;
+  }
+  .main-header .navigation .searchWidget .inputWrap {
+    display: block;
+    position: static;
+  }
+  .main-header .navigation .searchWidget .inputWrap .form-control {
+    width: 100%;
   }
   .main-header .menu-icon {
     display: block;
   }
   .main-header .menu-btn:checked ~ .navigation {
     opacity: 1;
+    transform: translateX(0);
   }
-  .main-header .menuLists .menuList {
-    padding: 10px;
+
+  figure {
+    height: 500px;
   }
-  .main-header .menuLists .menuList a {
-    display: block;
-  }
-  .main-header .menuLists .menuList a.active {
-    background: none;
+  figure .bannerText {
+    text-align: center;
   }
 }
 

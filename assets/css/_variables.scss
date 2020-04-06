@@ -7,3 +7,8 @@ $smPadding:30px 0;
 $sectionPadding:60px 0;
 $smallerFont:12px;
 $placeHolderColor:rgba(0,0,0,0.25);
+
+@mixin radius($val){
+    border-radius:$val;
+    -webkit-border-radius:$val;
+}

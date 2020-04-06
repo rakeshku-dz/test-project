@@ -20,7 +20,11 @@
         }
     }
     .searchWidget{position: relative;
-        .form-control{position: absolute; right:30px; top:0; min-width: 200px; height: auto; padding: .2rem .75rem; display: none;}
+        .inputWrap{position: absolute; right:30px; top:0;  display: none;
+            .form-control{ min-width: 200px; height: auto; padding: .2rem 1.5rem .2rem .75rem; @include radius(0);}
+            button{background-color: transparent; border: none; position: absolute; right:0.5rem; top: 0; height: 100%; padding: 0 8px;}
+        }
+        
         svg{fill:rgba(255,255,255,0.5); cursor: poiter; margin-left: 20px;}
     }
     &.scrolled{background-color: $blackColor;

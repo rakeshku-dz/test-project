@@ -6,18 +6,33 @@
     .main-header { padding: 10px 0;
         .logo img{max-height: 50px;}
         .navigation{
-            position: absolute; top:70px; left:0; width:100%; background-color: $blackColor; text-align: center; opacity: 0;
-        }
-        .menu-icon{display: block;}
-        .menu-btn:checked ~ .navigation{opacity: 1;}
-        .menuLists{
-            .menuList{ padding:10px;
-                a{    display: block;           
-                    &.active{background: none;}                
+            position: absolute; top:70px; right:0; width:250px; background-color: $blackColor; text-align: center; opacity: 0; transform: translateX(250px); transition: all 0.8s ease; height: calc(100vh - 70px); overflow:auto;
+
+            .menuLists{
+                .menuList{ 
+                    a{    display: block;           
+                        &.active{background: none;}                
+                    }
                 }
             }
+
+            .searchWidget{
+                .inputWrap{display: block; position: static; 
+                    .form-control{  width: 100%;}   
+                }
+                             
+            }
         }
+        .menu-icon{display: block;}
+        .menu-btn:checked ~ .navigation{opacity: 1; transform: translateX(0);}
+        
+
+
        
+    }
+
+    figure{height: 500px;
+        .bannerText{text-align: center;}
     }
     
 }

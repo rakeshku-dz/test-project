@@ -1,7 +1,4 @@
-@mixin radius($val){
-    border-radius:$val;
-    -webkit-border-radius:$val;
-}
+
 @mixin dateTime($color) {
     color: $color; font-size: $smallerFont; font-family: $latoFont; font-weight: 700;
 }
@@ -77,7 +74,7 @@ a.more-articles{color: $blackColor; font-weight: 900; font-size: $smallerFont; t
       }    
 }
 
-.event-tabs{padding-right: 40px; font-family:$oswaldFont; font-weight: 700; font-size: 24px; line-height: 1; text-transform: uppercase;
+.event-tabs{padding-right: 40px; font-family:$oswaldFont; font-weight: 700; font-size: 24px; line-height: 1; text-transform: uppercase; overflow: hidden;
     a{
         color: rgba(0,0,0,0.14);
         &:hover,  &.active{color: rgba(0,0,0,1);}
