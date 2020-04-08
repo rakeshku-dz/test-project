@@ -20,9 +20,11 @@
         }
     }
     .searchWidget{position: relative;
-        .inputWrap{position: absolute; right:30px; top:0;  display: none;
-            .form-control{ min-width: 200px; height: auto; padding: .2rem 1.5rem .2rem .75rem; @include radius(0);}
+        .inputWrap{position: absolute; right:25px; top:-8px; opacity: 0; visibility: hidden; transition: all 0.8s ease-out;
+            .form-control{ width: 250px; border: none; padding: .2rem 1.5rem .2rem .75rem; @include radius(0);}
             button{background-color: transparent; border: none; position: absolute; right:0.5rem; top: 0; height: 100%; padding: 0 8px;}
+
+            &.searchOpen{display: block;  opacity: 1; visibility: visible;}
         }
         
         svg{fill:rgba(255,255,255,0.5); cursor: poiter; margin-left: 20px;}
@@ -33,3 +35,8 @@
         }
     }
 } 
+
+.innerpage {
+    .main-header{background-color: $blackColor;}
+}
+

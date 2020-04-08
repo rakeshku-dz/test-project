@@ -8,3 +8,8 @@ window.addEventListener('scroll', () =>{
         header.classList.remove('scrolled');
     }
 })
+
+function showSearch(){
+    let searchDiv = document.getElementById("search");
+    searchDiv.classList.toggle("searchOpen");
+}

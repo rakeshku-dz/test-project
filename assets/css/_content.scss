@@ -94,3 +94,26 @@ a.more-articles{color: $blackColor; font-weight: 900; font-size: $smallerFont; t
 footer{background-color: $blackColor; padding: 40px 0; color: #fff; font-size: $smallerFont;
     .sep{display: inline-block; margin: 0 40px;}
 }
+
+.listenPodcast{
+    .podCast{font-family: $oswaldFont; font-size: 17px; font-style: italic;
+        p{color: $yellowColor;}
+    }    
+}
+
+.subArtices{margin-top: 60px; padding-top: 36px; border-top:1px solid $blackColor;
+    h3{font-size: 20px; font-weight: bold; font-style: italic;}
+    article + article{margin-top: 36px; padding-top: 36px; border-top:1px solid $blackColor;}
+}
+
+.podcasts{
+    li{margin-bottom:30px;
+        .podCastLogo{width: 70px; background-color: #f1f1f1; padding: 5px;}
+        .podCastDetails{background-color: $yellowColor; color: #fff; padding: 13px; font-weight: 900;
+            p{letter-spacing: 0.85px;}
+            h3{font-size: 20px; color: #000; font-weight: 700; font-style: italic;}
+            img{width:25px; height: 25px;}
+            .playBtn{position: absolute; top:50%; margin-top: -12px; right:20px;}
+        }
+    }
+}

@@ -16,8 +16,8 @@
                 }
             }
 
-            .searchWidget{
-                .inputWrap{display: block; position: static; 
+            .searchWidget{ padding-top: 10px;
+                .inputWrap{opacity: 1; visibility: visible; position: static; width: 100%; max-width: 300px;
                     .form-control{  width: 100%;}   
                 }
                              
@@ -25,14 +25,34 @@
         }
         .menu-icon{display: block;}
         .menu-btn:checked ~ .navigation{opacity: 1; transform: translateX(0);}
-        
-
-
-       
     }
 
     figure{height: 500px;
         .bannerText{text-align: center;}
     }
     
+}
+
+@media all and (max-width:991px){
+    body.innerpage{
+        figure{margin-top: 72px;
+            > img{height: 300px;}           
+        }
+    }
+    .section-block{padding: 30px 0;}   
+}
+
+
+@media all and (max-width:575px){
+    body.innerpage{
+        figure{    
+            > img{height: 200px;}        
+            .innerBanner{
+                .headTitle{font-size: 30px;
+                    span{ width:300px;}
+                }
+            }
+        }
+    }
+   
 }
