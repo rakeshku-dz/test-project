@@ -18,7 +18,7 @@
 }
 
 @mixin headingBg($background) {
-    font-family:$rockSaltFont; font-size: 22px; font-weight: bold; letter-spacing: 3px; background: url($background) no-repeat;
+    font-family:$rockSaltFont; font-size: 22px; font-weight: 700; letter-spacing: 3px; background: url($background) no-repeat;
 }
 .heading{@include headingBg('../img/fresh-clip.svg');}
 .video-articles{
@@ -74,7 +74,7 @@ a.more-articles{color: $blackColor; font-weight: 900; font-size: $smallerFont; t
       }    
 }
 
-.event-tabs{padding-right: 40px; font-family:$oswaldFont; font-weight: 700; font-size: 24px; line-height: 1; text-transform: uppercase; overflow: hidden;
+.event-tabs{/*padding-right: 40px;*/ font-family:$oswaldFont; font-weight: 700; font-size: 24px; line-height: 1; text-transform: uppercase; overflow: hidden;
     a{
         color: rgba(0,0,0,0.14);
         &:hover,  &.active{color: rgba(0,0,0,1);}
@@ -117,3 +117,33 @@ footer{background-color: $blackColor; padding: 40px 0; color: #fff; font-size: $
         }
     }
 }
+
+.slick-slider.months{padding-right: 40px; margin-bottom: 0;
+    .slick-slide{padding-right: 30px; color: rgba(0,0,0,0.14);
+        &.slick-active{color: rgba(0,0,0,1);}
+    }
+    .slick-prev{right:16px; left: auto;
+        &:before{content: "<";}
+    }
+    .slick-next{right:0;
+        &:before{content: ">";}
+    }
+    .slick-prev:before, .slick-next:before{color: #333; font-family: $oswaldFont; font-size: 24px; font-weight: bold;}
+}
+
+.pagesLink{margin-left: -10px; margin-right: -10px;
+    a{color: rgba(0,0,0,0.3); padding: 0 10px 10px; font-weight: 900; font-size: $smallerFont; text-transform: uppercase;  letter-spacing: 0.85px;
+        &.active{color: rgba(0,0,0,1); background: url(../img/more-linkbg.svg) no-repeat right bottom;}
+    }
+}
+
+.eventsCal{  
+    li{
+        h3{font-size: 24px; font-weight: 700;}
+        .eventRow{padding:15px 0;}
+        +li{border-top:3px $blackColor solid; margin-top: 30px; padding-top: 30px;}
+    }  
+    
+}
+
+

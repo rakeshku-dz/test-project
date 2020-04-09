@@ -222,7 +222,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-1">
-                <h2 class="heading mb-5">Get in touch</h2>
+                <h2 class="heading mb-5"><span>Get in touch</span></h2>
                 <form class="formMT">
                     <div class="row">
                         <div class="col-md-6 form-group">
@@ -237,14 +237,13 @@
                         <div class="col-md-6 form-group">
                             <input type="text" class="mdInput" placeholder="Website">
                         </div>
-                        <div class="col-md-6">
-                           
-                                <div class="input-group form-group ">
-                                    <div class="input-group-prepend">
-                                      <div class="input-group-text"><img src="assets/img/calendar.svg" alt=""></div>
-                                    </div>
-                                    <input type="text" class="mdInput" id="inlineFormInputGroupUsername2" placeholder="Phone number">
+                        <div class="col-md-6">                           
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><img src="assets/img/calendar.svg" alt=""></div>
                                 </div>
+                                <input type="text" class="mdInput" id="inlineFormInputGroupUsername2" placeholder="Phone number">
+                            </div>
                            
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
@@ -262,19 +261,33 @@
                 </form>
             </div>
             <div class="col-md-4 mt-5 mt-md-0">
-                <h2 class="heading mb-5">Events</h2>
+                <h2 class="heading mb-5"><span>Events</span></h2>
                 <div class="event-calendar">
                     <div class="event-tabs position-relative">
-                        <ul class="d-flex">
+                        <div class="slider months">
+                            <div>January</div>
+                            <div>Februry</div>
+                            <div>March</div>
+                            <div>April</div>
+                            <div>May</div>
+                            <div>June</div>
+                            <div>July</div>
+                            <div>August</div>
+                            <div>September</div>
+                            <div>October</div>
+                            <div>November</div>
+                            <div>December</div>
+                        </div>
+                       <!--<ul class="d-flex">                            
                             <li><a href="#" class="active">April</a></li>
                             <li><a href="#">May</a></li>
                             <li><a href="#">June</a></li>
                             <li><a href="#">July</a></li>
                         </ul>
-                        <div class="arrows">
+                          <div class="arrows">
                             <a href="#" class="prev"><</a>
                             <a href="#" class="next active">></a>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="eventsWidget">
@@ -335,6 +348,19 @@
         draggable: true,
         slidesToShow: 3,
         slidesToScroll: 1
+      });
+
+      $(".months").slick({
+        draggable: true,
+        accessibility: false,
+        dots: false,
+        variableWidth: true,
+        slidesToShow: 1,
+        initialSlide:3,
+        arrows: true,        
+        swipeToSlide: true,
+        infinite: false,
+        focusOnSelect: true
       });
       
       

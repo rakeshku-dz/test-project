@@ -370,7 +370,7 @@ body.innerpage figure .innerBanner .headTitle span {
 .heading {
   font-family: "Rock Salt", cursive;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 3px;
   background: url("../img/fresh-clip.svg") no-repeat;
 }
@@ -426,7 +426,7 @@ body.innerpage figure .innerBanner .headTitle span {
 .otherArticles .heading {
   font-family: "Rock Salt", cursive;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 3px;
   background: url("../img/white-shape.svg") no-repeat;
 }
@@ -487,7 +487,7 @@ a.more-articles {
 }
 
 .event-tabs {
-  padding-right: 40px;
+  /*padding-right: 40px;*/
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -598,6 +598,67 @@ footer .sep {
   top: 50%;
   margin-top: -12px;
   right: 20px;
+}
+
+.slick-slider.months {
+  padding-right: 40px;
+  margin-bottom: 0;
+}
+.slick-slider.months .slick-slide {
+  padding-right: 30px;
+  color: rgba(0, 0, 0, 0.14);
+}
+.slick-slider.months .slick-slide.slick-active {
+  color: black;
+}
+.slick-slider.months .slick-prev {
+  right: 16px;
+  left: auto;
+}
+.slick-slider.months .slick-prev:before {
+  content: "<";
+}
+.slick-slider.months .slick-next {
+  right: 0;
+}
+.slick-slider.months .slick-next:before {
+  content: ">";
+}
+.slick-slider.months .slick-prev:before, .slick-slider.months .slick-next:before {
+  color: #333;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.pagesLink {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.pagesLink a {
+  color: rgba(0, 0, 0, 0.3);
+  padding: 0 10px 10px;
+  font-weight: 900;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.85px;
+}
+.pagesLink a.active {
+  color: black;
+  background: url(../img/more-linkbg.svg) no-repeat right bottom;
+}
+
+.eventsCal li h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.eventsCal li .eventRow {
+  padding: 15px 0;
+}
+.eventsCal li + li {
+  border-top: 3px #000000 solid;
+  margin-top: 30px;
+  padding-top: 30px;
 }
 
 @media all and (max-width: 1199px) {
